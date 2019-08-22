@@ -1,9 +1,29 @@
-<meta charset=UTF-8>
+<meta charset="UTF-8">
 <script>
-    var cont = 0;
-while (cont <= 10){
-    alert(cont + "* 2 = "+ cont * 2);
-    cont+=1;
-    
-}
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+    var contErros = 0
+    var loginInformado = "";
+    var senhaInformada = "";
+
+    if (contErros !=3 ) {
+        while (loginCadastrado != loginInformado || senhaCadastrada != senhaInformada ){
+            loginInformado = prompt("Informe seu login");
+            senhaInformada = prompt("Informe sua senha");
+
+            if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+                alert("Bem-vindo ao sistema " + loginInformado);
+                break
+
+            } else {
+                contErros += 1
+                alert("Login inválido. Tente novamente");
+            }
+        }
+    }
+    else{
+        alert("conta bloqueada. motivo: muitas tentativas")
+    }
 </script>
