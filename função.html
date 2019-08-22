@@ -1,8 +1,14 @@
 <meta charset="UTF-8">
 <script>
-function escreve(frase){
-    document.write(frase);
+function calculardiferenca(idade1,idade2){
+    if (idade1 >= idade2){
+        calculo = idade1 - idade2;
+    }
+    else{
+        calculo = idade2-idade1;
+    }
+    document.write(calculo);
 }
+calculardiferenca(19,24);
 
-    escreve("olá, eu sou o luiz");
 </script>
